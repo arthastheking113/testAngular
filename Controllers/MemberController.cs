@@ -62,8 +62,8 @@ namespace testAngular.Controllers
         public async Task<ActionResult<Member>> InsertMember([FromBody] Member model)
         {
             var identity = User.Identity as ClaimsIdentity;
-            Claim identityClaim = identity.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
-            model.ApplicationUserId = _context.Users.FirstOrDefault(u => u.Id == identityClaim.Value).Id;
+            var userName = identity.Name;
+            model.ApplicationUserId = _context.Users.FirstOrDefault(u => u.Email == userName).Id;
             _context.Members.Add(model);
             await _context.SaveChangesAsync();
             return CreatedAtAction("GetMember", new { id = model.Id }, model);

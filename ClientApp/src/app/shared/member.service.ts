@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class MembersService {
   constructor(private http: HttpClient) {
   }
-  readonly _baseUrl = "https://localhost:44337/api/Member";
+  readonly _baseUrl = `${window.location.href}/api/Member`;
   formData: Members = new Members();
   list: Members[];
   postMember() {
