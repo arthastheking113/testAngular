@@ -1,0 +1,22 @@
+{
+  "name": "testangular",
+  "version": "1.0.0",
+  "description": "this is a test angular project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthastheking113/testAngular.git"
+  },
+  "keywords": [
+    "testAngular"
+  ],
+  "author": "Lan Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arthastheking113/testAngular/issues"
+  },
+  "homepage": "https://github.com/arthastheking113/testAngular#readme"
+}
