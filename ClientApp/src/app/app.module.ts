@@ -34,7 +34,7 @@ import { MemberFormComponent } from './member/member-form/member-form.component'
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
-      { path: 'member', component: MemberComponent },
+      { path: 'member', component: MemberComponent, canActivate: [AuthorizeGuard] } ,
     ])
   ],
   providers: [
