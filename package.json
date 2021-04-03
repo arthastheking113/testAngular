@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "clean:install": "npm run clean && rimraf ./node_modules ./bin ./obj ./package-lock.json && dotnet restore Asp2017.csproj && npm i",
+    "ng": "ng",
+    "start": "nodemon server.js",
+    "build": "ng build",
     "lint": "tslint -p tsconfig.json",
+    "e2e": "ng e2e",
     "test": "npm run build:vendor && karma start ClientApp/test/karma.conf.js",
     "test:watch": "npm run test -- --auto-watch --no-single-run",
     "test:ci": "npm run test -- --browsers PhantomJS_custom",
@@ -16,9 +20,7 @@
     "build:prod": "npm run clean && npm run build:vendor -- --env.prod && npm run build:webpack -- --env.prod",
     "build:p": "npm run build:webpack -- --env.prod",
     "build:vendor": "webpack --config webpack.config.vendor.js --progress --color",
-    "clean": "rimraf wwwroot/dist clientapp/dist",
-    "ng": "ng",
-    "start": "ng serve"
+    "clean": "rimraf wwwroot/dist clientapp/dist"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",
@@ -55,6 +57,7 @@
     "moment": "^2.24.0",
     "ngx-bootstrap": "^3.2.0",
     "node-sass": "^4.11.0",
+    "nodemon": "^2.0.7",
     "preboot": "^7.0.0",
     "raw-loader": "^1.0.0",
     "rimraf": "^2.6.3",
@@ -101,7 +104,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arthastheking113/testAngular"
+    "url": "git+https://github.com/arthastheking113/testAngular.git"
   },
   "keywords": [
     "testAngular"
