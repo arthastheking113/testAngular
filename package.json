@@ -99,7 +99,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arthastheking113/testAngular.git"
+    "url": "https://github.com/arthastheking113/testAngular"
   },
   "keywords": [
     "testAngular"
