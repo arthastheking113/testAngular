@@ -16,7 +16,11 @@
     "build:prod": "npm run clean && npm run build:vendor -- --env.prod && npm run build:webpack -- --env.prod",
     "build:p": "npm run build:webpack -- --env.prod",
     "build:vendor": "webpack --config webpack.config.vendor.js --progress --color",
-    "clean": "rimraf wwwroot/dist clientapp/dist"
+    "clean": "rimraf wwwroot/dist clientapp/dist",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "e2e": "ng e2e"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",
